@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font styles */
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6, button {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Animation styles */
+@layer utilities {
+  .animation-pause {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cd-spin {
+  animation: spin 5s linear infinite;
+  animation-play-state: paused;
+}
+
+.cd-spin.playing {
+  animation-play-state: running;
+}
